@@ -1,0 +1,17 @@
+[project]
+name = "cv-image-classification"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "torch==2.2.2",
+    "torchvision==0.17.2",
+    "torchaudio==2.2.2",
+    "lightning",
+    "jupyterlab",
+    "numpy<2",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "pillow",
+    "seaborn",
+]

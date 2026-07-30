@@ -23,7 +23,7 @@ decorator==5.3.1
 defusedxml==0.7.1
 executing==2.2.1
 fastjsonschema==2.22.1
-filelock==3.32.0
+filelock==3.32.2
 fonttools==4.63.0
 fqdn==1.5.1
 frozenlist==1.8.0
@@ -43,7 +43,7 @@ json5==0.15.0
 jsonpointer==3.1.1
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
-jupyter-builder==1.1.1
+jupyter-builder==1.2.0
 jupyter-client==8.9.1
 jupyter-core==5.9.1
 jupyter-events==0.12.1
@@ -90,7 +90,7 @@ pygments==2.20.0
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 python-json-logger==4.1.0
-pytorch-lightning==2.3.3
+pytorch-lightning==2.6.5
 pyyaml==6.0.3
 pyzmq==27.1.0
 referencing==0.37.0
@@ -111,6 +111,7 @@ terminado==0.18.1
 threadpoolctl==3.6.0
 tinycss2==1.5.1
 torch==2.2.2
+torchaudio==2.2.2
 torchmetrics==1.9.0
 torchvision==0.17.2
 tornado==6.5.7
