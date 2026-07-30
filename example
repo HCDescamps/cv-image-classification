@@ -1,0 +1,16 @@
+import lightning.pytorch as pl
+from torch.utils.data import DataLoader
+from torchvision.datasets import MNIST
+from torchvision import transforms
+
+transform = transforms.ToTensor()
+train_ds = MNIST(root='.', train=True, download=True, transform=transform)
+test_ds = MNIST(root='.', train=False, download=True, transform=transform)
+
+train_loader = DataLoader(train_ds, batch_size=64, shuffle=True)
+test_loader = DataLoader(test_ds, batch_size=64)
+
+model = ClassificationModel(input_dim=28*28, hidden_dim=128, num_class=10)
+
+trainer = pl.Trainer(max_epochs=3, accelerator='auto')
+trainer.fit(model, train_loader, test_loader)
