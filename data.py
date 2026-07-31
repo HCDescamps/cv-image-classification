@@ -3,13 +3,6 @@ import lightning.pytorch as pl
 from torch.utils.data import DataLoader, random_split
 from torchvision import datasets, transforms
 
-from torch.utils.data import DataLoader, random_split
-from torchvision import datasets, transforms
-
-
-
-
-
 
 class ImageDataModule(pl.LightningDataModule):
     def __init__(self, data_dir="./data", batch_size=32):

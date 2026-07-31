@@ -2,20 +2,14 @@ Computer Vision Project Summary
 
 This project developed and evaluated a convolutional neural network (CNN) for handwritten digit classification using the MNIST dataset. The objective was to build an image classification model capable of accurately recognizing digits from grayscale images while demonstrating the complete deep learning workflow, including data preparation, model design, training, evaluation, and visualization.
 
-The model was implemented using PyTorch Lightning, which streamlined the training process and enabled checkpointing, early stopping, and experiment logging. Model performance was assessed using training and validation loss, validation and test accuracy, and a confusion matrix to examine classification errors. Additional visualizations, including learning curves and examples of misclassified images, were used to communicate the model's performance and provide insight into the types of prediction errors that remained.
+The model was implemented using PyTorch Lightning, which streamlined the training process through features such as checkpointing, experiment logging, and structured training workflows. Model performance was evaluated using training and validation loss, validation and test accuracy, and a confusion matrix to analyze classification errors. Additional visualizations, including learning curves and misclassified image examples, provided further insight into model behavior and prediction limitations.
 
-The final CNN achieved approximately 99.6% validation accuracy and 99.0% test accuracy, demonstrating excellent generalization to unseen handwritten digits. Most prediction errors occurred between visually similar digits, highlighting the inherent ambiguity present in some handwritten samples rather than limitations of the overall model. These results illustrate the effectiveness of convolutional neural networks for image classification tasks and emphasize the value of combining quantitative metrics with visual analysis to interpret model performance.
+The final CNN achieved approximately 99.6% validation accuracy and 99.0% test accuracy, demonstrating strong generalization to unseen handwritten digits. Most remaining errors occurred between visually similar classes, highlighting the ambiguity of some handwritten samples rather than limitations of the overall architecture. These results demonstrate the effectiveness of convolutional neural networks for image classification and emphasize the importance of combining quantitative evaluation with visual analysis.
 
+To investigate model scalability and deployment optimization, several techniques were explored, including dynamic quantization, weight pruning, and TorchScript conversion. Dynamic quantization was applied to reduce the precision of linear layers, weight pruning was used to remove less significant parameters, and TorchScript conversion was evaluated as a method for improving model portability and deployment outside the original Python environment.
 
-Metric:
-Validation accuracy: 99.62%	
-Validation loss: 0.0112	
-Test accuracy: 99.01%	
-Test loss: 0.0321
+The quantization experiment showed that model compression could be achieved while maintaining predictive performance. The original model size was reduced from 198.83 KB to 107.72 KB, while maintaining a stable test accuracy of 99.01%. Although inference time improvement was limited because dynamic quantization only affected the linear layer and the convolutional layers remained unchanged, the reduction in storage requirements demonstrates the potential of quantization for resource-efficient deployment.
 
-Misclassified example:
+The pruning experiment further improved model efficiency by applying L1 unstructured pruning to the classifier layer. This removed 40% of the classifier weights, resulting in 25% overall model sparsity across the complete network. The experiment demonstrated that redundant parameters could be reduced while preserving the original model structure.
 
-True: 5
-Model: 6
-Confidence: 73%
-
+Overall, this project demonstrated the complete development cycle of a computer vision model, from dataset preparation and CNN implementation to performance analysis and optimization. The results show that scalability techniques such as quantization and pruning can reduce resource requirements while maintaining high classification accuracy, making CNN models more suitable for efficient deployment.

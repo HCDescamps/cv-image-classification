@@ -1,12 +1,28 @@
-.venv/
-
-__pycache__/
-*.pyc
-
-.DS_Store
-
-data/MNIST/
-
 # Temporary files
 *.log
 *.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Data
+data/
+MNIST/
+
+# Model files
+*.pt
+*.pth
+*.ckpt
+
+# Training logs
+lightning_logs/

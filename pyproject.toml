@@ -14,4 +14,7 @@ dependencies = [
     "scikit-learn",
     "pillow",
     "seaborn",
+    "torchinfo>=1.8.0",
+    "hiddenlayer>=0.3",
+    "tensorboard>=2.21.0",
 ]
