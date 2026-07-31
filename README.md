@@ -1,4 +1,4 @@
-Computer Vision Project Summary
+## Computer Vision Project Summary
 
 This project developed and evaluated a convolutional neural network (CNN) for handwritten digit classification using the MNIST dataset. The objective was to build an image classification model capable of accurately recognizing digits from grayscale images while demonstrating the complete deep learning workflow, including data preparation, model design, training, evaluation, and visualization.
 
